@@ -1,0 +1,602 @@
+/* Universal Resetter */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Styling Body */
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: white;
+    background-color: #000;
+}
+
+/* Header Styling */
+header {
+    position: relative;
+    z-index: 2;
+}
+
+/* Navigation */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 24px 150px 0 150px;
+}
+
+/* Logo */
+.logo img {
+    height: 45px;
+    width: 150px;
+}
+
+/* Buttons */
+button {
+    background-color: rgb(229, 9, 20);
+    border: none;
+    border-radius: 4px;
+    padding: 9px 16px;
+    cursor: pointer;
+    color: white;
+    font-weight: 700;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: rgb(193, 17, 25);
+}
+
+button:active {
+    background-color: rgb(153, 22, 29);
+}
+
+/* Main Section */
+.main {
+    background-image: linear-gradient(to bottom,
+            rgba(0, 0, 0, 0.85) 0%,
+            rgba(0, 0, 0, 0.55) 50%,
+            rgba(0, 0, 0, 0.85) 100%), url(./assets/netflixbg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    clip-path: ellipse(150% 100% at 50% 0%);
+}
+
+/* Main Section Content */
+.main-content {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    text-align: center;
+    padding: 0 20px;
+    gap: 16px;
+}
+
+.main-content h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    max-width: 600px;
+    margin-bottom: 8px;
+    line-height: 1.15;
+    letter-spacing: -1.2;
+}
+
+.main-content h3 {
+    font-size: 22px;
+}
+
+.main-content p {
+    font-weight: 500;
+}
+
+/* Email Input and Email Button Styling */
+.start {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 550px;
+    margin-top: 16px;
+}
+
+.start input {
+    height: 56px;
+    width: 100%;
+    max-width: 450px;
+    padding: 0 16px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: white;
+    background-color: rgba(22, 22, 22, 0.7);
+    border: 1px solid rgba(128, 128, 128, 0.7);
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.email-btn {
+    padding: 0 16px;
+    font-size: 1.5rem;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    height: 56px;
+    white-space: nowrap;
+}
+
+
+/* Sections Designing */
+section {
+    background-color: #000000;
+    padding: 40px 150px;
+}
+
+section h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Trending Section */
+.trending-topics {
+    scroll-behavior: smooth;
+    counter-reset: netflix-rank;
+    display: flex;
+    gap: 30px;
+    overflow-x: auto;
+    position: relative;
+    padding: 20px 60px;
+}
+
+.trending-topics::-webkit-scrollbar {
+    display: none;
+}
+
+.trends {
+    flex-shrink: 0;
+    height: 250px;
+    width: 180px;
+    background-color: #222;
+    border-radius: 8px;
+    position: relative;
+
+}
+
+.trend1 {
+    background-image: url(./assets/Dhamal.webp);
+}
+
+.trend2 {
+    background-image: url(./assets/Vishwanath.webp);
+}
+
+.trend3 {
+    background-image: url(./assets/Cocktail.webp);
+}
+
+.trend4 {
+    background-image: url(./assets/Alpha.webp);
+}
+
+.trend5 {
+    background-image: url(./assets/gentleman.webp);
+}
+
+.trend6 {
+    background-image: url(./assets/gandhari.webp);
+}
+
+.trend7 {
+    background-image: url(./assets/vapas.webp);
+}
+
+.trend8 {
+    background-image: url(./assets/sexlife.webp);
+}
+
+.trend9 {
+    background-image: url(./assets/money\ heist.webp);
+}
+
+.trend10 {
+    background-image: url(./assets/latent.webp);
+}
+
+/* Trending Slider */
+.slider-container {
+    position: relative;
+    width: 100%;
+}
+
+.slider-arrow {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 20px;
+    background-color: rgba(0, 0, 0, 0);
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 2.5rem;
+    border: none;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease, visibility 0.2s ease, opacity 0.2s ease;
+    opacity: 0.5;
+    visibility: visible;
+}
+
+.slider-container:hover .slider-arrow {
+    opacity: 0.5;
+}
+
+.slider-arrow:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    font-size: 3rem;
+}
+
+.slider-arrow.hidden {
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none;
+}
+
+.left-arrow {
+    left: 0;
+}
+
+.right-arrow {
+    right: 0;
+}
+
+.trends::before {
+    counter-increment: netflix-rank;
+    content: counter(netflix-rank);
+    font-size: 7rem;
+    font-weight: 900;
+    color: #000000;
+    -webkit-text-stroke: 4px #737373;
+    position: absolute;
+    bottom: -15px;
+    left: -20px;
+    z-index: 1;
+    line-height: 1;
+    font-family: 'Arial Black', sans-serif;
+}
+
+.trends:nth-child(10)::before {
+    left: -25px;
+}
+
+/* Reasons Section */
+.reasons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.reasons-about {
+    height: 300px;
+    width: 270px;
+    background: linear-gradient(135deg,
+            rgba(25, 23, 48, 1) 0%,
+            rgba(15, 15, 26, 1) 60%,
+            rgba(10, 10, 15, 1) 100%);
+    border-radius: 16px;
+    padding: 24px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.reasons-about::after {
+    content: '';
+    position: absolute;
+    bottom: -30px;
+    right: -30px;
+    width: 120px;
+    height: 120px;
+    background: radial-gradient(circle, rgba(229, 9, 20, 0.25) 0%, rgba(0, 0, 0, 0) 70%);
+    filter: blur(15px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+.reasons-about h3,
+.reasons-about p {
+    position: relative;
+    z-index: 2;
+}
+
+.reasons-about h3 {
+    font-size: 1.35rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.reasons-about p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.4;
+}
+
+
+.card-icon {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    width: 72px;
+    height: 72px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.card-text {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+}
+
+/* Question Answers Styling */
+.faq-section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 40px;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.faq-header {
+    background-color: rgb(45, 45, 45);
+    color: white;
+    padding: 24px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.2s ease;
+}
+
+.faq-header:hover {
+    background-color: rgb(65, 65, 65);
+}
+
+.faq-icon {
+    font-size: 2.2rem;
+    line-height: 1;
+    font-weight: 300;
+    transition: transform 0.2s ease-in-out;
+}
+
+.faq-answer {
+    background-color: rgb(45, 45, 45);
+    color: white;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s cubic-bezier(0.5, 0, 0.1, 1), padding 0.2s ease;
+    padding: 0 24px;
+}
+
+.faq-answer p {
+    margin-bottom: 24px;
+}
+
+.faq-answer p:last-child {
+    margin-bottom: 0;
+}
+
+.faq-item.active .faq-icon {
+    transform: rotate(45deg);
+}
+
+.faq-item.active .faq-answer {
+    max-height: 600px;
+    padding: 24px;
+    border-top: 1px solid #000000;
+}
+
+/* Signup after Questions */
+.signup-input {
+    margin-top: 40px;
+}
+
+/* Footer */
+footer {
+    max-width: 1000px;
+    margin: 80px auto 40px auto;
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+footer a,
+footer ul,
+footer p {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration-color: rgba(255, 255, 255, 0.7);
+}
+
+.links-container ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px 24px;
+    list-style: none;
+    padding: 20px 0;
+}
+
+
+footer p:nth-of-type(2) {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.4);
+    margin-top: 8px;
+}
+
+/* Language Switch */
+.lang-switcher {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    padding: 6px 12px;
+    margin-top: 12px;
+    transition: border-color 0.2s ease;
+}
+
+.lang-switcher .icon {
+    width: 16px;
+    height: 16px;
+    color: #ffffff;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.lang-switcher select {
+    background: transparent;
+    color: #ffffff;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding-left: 28px;
+    padding-right: 20px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.lang-switcher .globe-icon {
+    position: absolute;
+    left: 12px;
+}
+
+.lang-switcher .caret-icon {
+    position: absolute;
+    right: 10px;
+}
+
+.lang-switcher:hover {
+    border-color: rgba(255, 255, 255, 0.6);
+}
+
+.lang-switcher select option {
+    background-color: #141414;
+    color: #ffffff;
+}
+
+
+
+
+
+/* MOobile & Tablet Responsive (Screens under 950px wide) */
+@media (max-width: 950px) {
+    
+    /* Fixed Global Padding Clashing */
+    .nav {
+        padding: 24px 24px 0 24px; /* Pulling logo and button away from screen edges */
+    }
+    
+    section {
+        padding: 40px 24px; /* Fixing the trending section clipping bug */
+    }
+
+    /* Stacking "More Reasons to Join" Cards Vertically */
+    .reasons {
+        flex-direction: column; /* Fliping them from side-by-side to vertically stacked */
+        width: 100%;
+        gap: 16px;
+    }
+
+    .reasons-about {
+        width: 100%;       /* Letting cards expand to fill full screen width */
+        max-width: 550px;  /* Keeping them comfortably readable */
+        height: auto;      /* Allowing content height to expand naturally if text is long */
+        min-height: 200px;
+    }
+
+    /* Scaling Down the Massive Header Text */
+    .main-content h1 {
+        font-size: 2.2rem; /* Reducing text sizing so it fits cleanly on phones */
+    }
+    
+    .main-content h3 {
+        font-size: 1.2rem;
+    }
+
+    /* Fixing Footer Grid Sizing */
+    .links-container ul {
+        grid-template-columns: repeat(2, 1fr); /* Fliping footer links from 4 columns to 2 columns */
+    }
+}
+
+/* Screens under 600px wide */
+@media (max-width: 600px) {
+    
+        .start {
+        flex-direction: column;
+        width: 100%;
+        max-width: 450px;
+        gap: 16px;
+    }
+
+    .start input, 
+    .email-btn {
+        width: 100% !important; /* Forcing input and button to match widths perfectly */
+        max-width: 100%;
+    }
+
+    .signup-input .start {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    /* Preventing Nav Items from Touching */
+    .logo img {
+        height: 28px;  /* Scaling down logo footprint on phone screens */
+        width: auto;
+    }
+    
+    .nav button {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+    }
+}

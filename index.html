@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Pakistan - Watch TV Shows Online, Watch Movies Online</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Main Content -->
+    <div class="main">
+
+        <!-- Header -->
+        <header>
+
+            <!-- Navigation Bar -->
+            <div class="nav">
+
+                <!-- Netflix Logo -->
+                <div class="logo">
+                    <img src="./assets/Netflix Logo.svg" alt="NETFLIX">
+                </div>
+
+                <!-- Signin Button -->
+                <div class="signin">
+                    <button class="signin-btn">Sign In</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <h1>Entertainment for every moment</h1>
+            <h3>Starts at Rs 250. Cancel anytime.</h3>
+            <p>Ready to watch? Enter your email to create or restart your membership.</p>
+
+            <!-- Email Signup -->
+            <div class="start">
+                <input type="email" name="email" id="email" placeholder="Email Address">
+                <button class="email-btn">Get Started <svg class="arrow" xmlns="http://www.w3.org/2000/svg"
+                        height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                        <path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z" />
+                    </svg></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Trending Topics Section -->
+    <section>
+        <h2>Trending Now</h2>
+
+        <!-- The main wrapper box -->
+        <div class="slider-container">
+
+            <!-- Left Navigation Button -->
+            <button class="slider-arrow left-arrow" onclick="slideRow('left')">&#10094;</button>
+
+            <!-- Trending Topics -->
+            <div class="trending-topics" id="trendingSlider">
+                <div class="trends trend1"></div>
+                <div class="trends trend2"></div>
+                <div class="trends trend3"></div>
+                <div class="trends trend4"></div>
+                <div class="trends trend5"></div>
+                <div class="trends trend6"></div>
+                <div class="trends trend7"></div>
+                <div class="trends trend8"></div>
+                <div class="trends trend9"></div>
+                <div class="trends trend10"></div>
+            </div>
+
+            <!-- Right Navigation Button -->
+            <button class="slider-arrow right-arrow" onclick="slideRow('right')">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- Reasons Section -->
+    <section>
+        <h2>More Reasons to Join</h2>
+
+        <!-- Main Wrapper for Reasons -->
+        <div class="reasons">
+
+            <!-- Card 1: Enjoy on your TV -->
+            <div class="reasons-about">
+                <div class="card-text">
+                    <h3>Enjoy on your TV</h3>
+                    <p>Watch on Smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</p>
+                </div>
+
+                <!-- TV Vector Icon -->
+                <svg class="card-icon" viewBox="0 0 24 24">
+                    <defs>
+                        <linearGradient id="iconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#ff1e56" />
+                            <stop offset="100%" stop-color="#8000ff" />
+                        </linearGradient>
+                    </defs>
+                    <path fill="url(#iconGrad)"
+                        d="M21 3H3c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h5v2h8v-2h5c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 14H3V5h18v12z" />
+                </svg>
+            </div>
+
+            <!-- Card 2: Download your shows -->
+            <div class="reasons-about">
+                <div class="card-text">
+                    <h3>Download your shows to watch offline</h3>
+                    <p>Save your favorites easily and always have something to watch.</p>
+                </div>
+
+                <!-- Download Arrow Icon -->
+                <svg class="card-icon" viewBox="0 0 24 24">
+                    <path fill="url(#iconGrad)"
+                        d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM17 13l-5 5-5-5h3V9h4v4h3z" />
+                </svg>
+            </div>
+
+            <!-- Card 3: Watch everywhere -->
+            <div class="reasons-about">
+                <div class="card-text">
+                    <h3>Watch everywhere</h3>
+                    <p>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV.</p>
+                </div>
+
+                <!-- Devices Icon -->
+                <svg class="card-icon" viewBox="0 0 24 24">
+                    <path fill="url(#iconGrad)"
+                        d="M4 6H2v14c0 1.1.9 2 2 2h14v-2H4V6zm16-4H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H8V4h12v12z" />
+                </svg>
+            </div>
+
+            <!-- Card 4: Create profiles for kids -->
+            <div class="reasons-about">
+                <div class="card-text">
+                    <h3>Create profiles for kids</h3>
+                    <p>Send kids on adventures with their favorite characters in a space made just for them—free with
+                        your membership.</p>
+                </div>
+
+                <!-- Kids Profiles Smiley Icon -->
+                <svg class="card-icon" viewBox="0 0 24 24">
+                    <path fill="url(#iconGrad)"
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15.5h-2v-2h2v2zm0-4.5h-2V7h2v6z" />
+                </svg>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Question Answers Section -->
+    <section class="faq-section">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-container">
+
+            <!-- FAQ Item 1 -->
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleFaq(this)">
+                    <span>What is Netflix?</span>
+                    <span class="faq-icon">&#43;</span> <!-- Plus character code -->
+                </div>
+                <div class="faq-answer">
+                    <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies,
+                        anime, documentaries, and more on thousands of internet-connected devices.</p>
+                    <p>You can watch as much as you want, whenever you want without a single commercial – all for one
+                        low monthly price. There's always something new to discover and new TV shows and movies are
+                        added every week!</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 2 -->
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleFaq(this)">
+                    <span>How much does Netflix cost?</span>
+                    <span class="faq-icon">&#43;</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one
+                        fixed monthly fee. Plans range from Rs 250 to Rs 1,100 a month. No extra costs, no contracts.
+                    </p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 3 -->
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleFaq(this)">
+                    <span>Where can I watch?</span>
+                    <span class="faq-icon">&#43;</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at
+                        netflix.com from your personal computer or on any internet-connected device that offers the
+                        Netflix app.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 4 -->
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleFaq(this)">
+                    <span>How do I cancel?</span>
+                    <span class="faq-icon">&#43;</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Netflix is flexible. You can easily cancel your account online in two clicks. There are no
+                        cancellation fees – start or stop your account anytime.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 5 -->
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleFaq(this)">
+                    <span>What can I watch on Netflix?</span>
+                    <span class="faq-icon">&#43;</span>
+                </div>
+                <div class="faq-answer">
+                    <p>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning
+                        Netflix originals, and more. Watch as much as you want, anytime you want.</p>
+                </div>
+            </div>
+
+            <!-- FAQ Item 6 -->
+            <div class="faq-item">
+                <div class="faq-header" onclick="toggleFaq(this)">
+                    <span>Is Netflix good for kids?</span>
+                    <span class="faq-icon">&#43;</span>
+                </div>
+                <div class="faq-answer">
+                    <p>The Netflix Kids experience is included in your membership to give parents control while kids
+                        enjoy family-friendly TV shows and movies in their own space.</p>
+
+                    <p>Kids profiles come with PIN-protected parental controls that let you restrict the maturity
+                        rating of content kids can watch and block specific titles you don’t want kids to see.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Signup Button Again with same styling s naming it same class name as before -->
+    <section>
+        <div class="main-content signup-input">
+            <p>Ready to watch? Enter your email to create or restart your membership.</p>
+            <div class="start">
+                <input type="email" name="email" id="email" placeholder="Email Address">
+                <button class="email-btn">Get Started <svg class="arrow" xmlns="http://www.w3.org/2000/svg"
+                        height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                        <path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z" />
+                    </svg></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <!-- Contact Us Link -->
+        <a href="#">Questions? Contact us.</a>
+
+        <!-- Footer Links -->
+        <div class="links-container">
+            <ul>
+                <li class="footer-links"><a href="#">FAQ</a></li>
+                <li class="footer-links"><a href="#">Help Center</a></li>
+                <li class="footer-links"><a href="#">Accout</a></li>
+                <li class="footer-links"><a href="#">Media Center</a></li>
+                <li class="footer-links"><a href="#">Investor Relations</a></li>
+                <li class="footer-links"><a href="#">Jobs</a></li>
+                <li class="footer-links"><a href="#">Ways to Watch</a></li>
+                <li class="footer-links"><a href="#">Terms of Use</a></li>
+                <li class="footer-links"><a href="#">Privacy</a></li>
+                <li class="footer-links"><a href="#">Cookie Preferences</a></li>
+                <li class="footer-links"><a href="#">Corporate Information</a></li>
+                <li class="footer-links"><a href="#">Contact Us</a></li>
+                <li class="footer-links"><a href="#">Speed Test</a></li>
+                <li class="footer-links"><a href="#">Legal Notices</a></li>
+                <li class="footer-links"><a href="#">Only on Netflix</a></li>
+            </ul>
+        </div>
+
+        <!-- Language Switch -->
+        <div class="lang-switcher">
+
+            <!-- The Left Side Globe Icon Vector -->
+            <svg class="icon globe-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor"
+                    d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10zm-2.29-2.333a8.03 8.03 0 0 1-1.63-3.167h3.86a8.01 8.01 0 0 1-2.23 3.167zM8.01 14.5H3.76a8.05 8.05 0 0 1 0-5h4.25c-.06.81-.1 1.64-.1 2.5s.04 1.69.1 2.5zm1.51 0h4.96c.06-.81.1-1.64.1-2.5s-.04-1.69-.1-2.5H9.52c-.06.81-.1 1.64-.1 2.5s.04 1.69.1 2.5zm6.48 0h4.25a8.05 8.05 0 0 1 0-5h-4.25c.06.81.1 1.64.1 2.5s-.04 1.69-.1 2.5zm-3.72 3.167a8.03 8.03 0 0 1-1.63 3.167 8.01 8.01 0 0 1-2.23-3.167h3.86zM12.01 4a8.01 8.01 0 0 1 2.23 3.167H9.78A8.01 8.01 0 0 1 12.01 4zM15.92 7.167h4.32a8.05 8.05 0 0 0-3.32-3.1 8.1 8.1 0 0 1-1 3.1zm-7.84 0h-4.32a8.05 8.05 0 0 1 3.32-3.1 8.1 8.1 0 0 0 1 3.1zM3.76 16.5h4.25a10.02 10.02 0 0 0 .66 3.1 8.05 8.05 0 0 1-4.91-3.1zm12.32 3.1a10.02 10.02 0 0 0 .66-3.1h4.25a8.05 8.05 0 0 1-4.91 3.1z" />
+            </svg>
+
+            <!-- The Native Function Dropdown List -->
+            <select id="lang-select">
+                <option value="en" selected>English</option>
+                <option value="ur">اردو (Urdu)</option>
+            </select>
+
+            <!-- The Right Side Caret Down Arrow Vector -->
+            <svg class="icon caret-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path fill="currentColor" d="M7 10l5 5 5-5z" />
+            </svg>
+
+        </div>
+
+        <p>Netflix Pakistan</p>
+        <p>This page is protected by Google reCAPTCHA to ensure you're not a bot.</p>
+    </footer>
+
+    <!-- Script File Link -->
+    <script src="script.js"></script>
+</body>
+
+</html>
